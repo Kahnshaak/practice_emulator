@@ -97,12 +97,12 @@ MAIN lda r3, welcome ; instructions are not case sensitive, but labels are
      trp #5 ; traps need the '#'
     ; also that prints out the string labeled 'welcome'
 movi r6, array
- movi, r5, #4
+ movi r5, #4
 call prnt_loop
-trp, #0 ; halt
+trp #0 ; halt
 
-prnt_loop ildr, r3, r6 ; get value from the address in r6 and put in r3
-trp, #1 ; print what value is in r3 as an int
+prnt_loop ildr r3, r6 ; get value from the address in r6 and put in r3
+trp #1 ; print what value is in r3 as an int
   subi r5, r5, #1 ; decrement loop counter
   addi r6, r6, #1 ; increment the address
   bnz r5, prnt_loop ; check if r5 is zero, otherwise loop
@@ -125,7 +125,7 @@ I have this set up to use nix so you don't need to have the right util versions.
 nix develop
 ```
 
-If do not using nix, then this will require having around g++ 11.4, Python 3.10, CMake 3.22.1, and Make 4.3. This also assumes use on linux. This probably won't work on other systems.
+If do not use nix, then this will require having around g++ 11.4, Python 3.10, CMake 3.22.1, and Make 4.3. This also assumes use on linux. This probably won't work on other systems.
 
 Build the project
 
