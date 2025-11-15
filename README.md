@@ -132,7 +132,7 @@ Build the project
 ```bash
 mkdir build
 cd build/
-CMake ..
+cmake ..
 make
 ```
 
