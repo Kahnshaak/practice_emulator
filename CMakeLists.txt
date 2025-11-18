@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(Project-3)
+project(practice_emulator)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,12 +16,12 @@ enable_testing()
 
 add_executable(
         runTests
-        tests/tests1.cpp include/emu4380.h src/emu4380.cpp include/cache.h src/cache.cpp
+        tests/tests1.cpp include/emu.h src/emu.cpp include/cache.h src/cache.cpp
 )
 
 add_executable(
-        emu4380
-        include/emu4380.h src/emu4380.cpp src/main.cpp include/cache.h src/cache.cpp
+        emu
+        include/emu.h src/emu.cpp src/main.cpp include/cache.h src/cache.cpp
 )
 
 target_link_libraries(

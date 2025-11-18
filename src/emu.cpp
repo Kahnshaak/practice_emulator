@@ -1,4 +1,4 @@
-#include "../include/emu4380.h"
+#include "../include/emu.h"
 #include "../include/cache.h"
 #include <iostream>
 #include <cstdlib>

@@ -1,6 +1,6 @@
 #include <cstring>
 
-#include "../include/emu4380.h"
+#include "../include/emu.h"
 #include <iostream>
 #include <fstream>
 

@@ -1,5 +1,5 @@
 {
-  description = "4380 Devshell for building the emulator";
+  description = "Devshell for building the emulator";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
@@ -14,6 +14,7 @@
           config.allowUnfree = true;
         };
 
+	# Should be pinned versions from the lock file and the nixpkgs version
         gcc = pkgs.gcc11; 
         cmake = pkgs.cmake;
         python = pkgs.python310Full;
@@ -30,7 +31,7 @@
           ];
 
           shellHook = ''
-            echo "Devshell for 4380"
+            echo "Devshell for emulator"
             echo "g++: $(g++ --version | head -n1)"
             echo "python: $(python --version)"
             echo "cmake: $(cmake --version | head -n1)"
